@@ -1,9 +1,13 @@
 import Banner from '@/components/Banner/Banner'
+import ListEvent from '@/components/Event/ListEvent'
 import React from 'react'
 
 const Event = () => {
   return (
-    <Banner name = "Sự kiện"/>
+    <div className='bg-secondary-200 w-full'>
+      <Banner name = "Sự kiện"/>
+      <ListEvent />
+    </div>
   )
 }
 
