@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import React from "react";
 
@@ -11,7 +12,7 @@ const LayoutRoute = (props: Props) => {
       {/* Header */}
       <Header />
       <Outlet />
-      {/* Footer */}
+      <Footer />
     </div>
   );
 };
