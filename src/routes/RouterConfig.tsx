@@ -7,6 +7,7 @@ import NotFound from "@/pages/error/NotFound";
 import GuestRoute from "./GuestRoute";
 import Login from "@/pages/auth/Login";
 import Signup from "@/pages/auth/Signup";
+import Event from "@/pages/event/Event";
 
 
 type Props = {};
@@ -26,6 +27,7 @@ const RouterConfig = (props: Props) => {
       <Route element={<LayoutRoute />}>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="event" element={<Event />} />
         {/* For user */}
         <Route element={<ProtectedRoute allowedRoles={[ROLES.USER]} />}>
           {/* <Route path="/profile/:id" element={<Profile />} /> */}
