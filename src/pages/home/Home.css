@@ -1,7 +1,7 @@
-.banner{
-    height: 778px;
-    background-image: url("../../../public/assets/background.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.banner {
+	height: 778px;
+	background-image: url("../../../public/assets/background.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
