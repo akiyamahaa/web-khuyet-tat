@@ -5,8 +5,8 @@ import {
   ROOT,
   INTRODUCTION_PATH,
   ENVENT_PATH,
-  PRODUCT_PATH,
   BLOG_PATH,
+  STORE_PATH,
 } from "@/routes/constant";
 import { CiSearch } from "react-icons/ci";
 
@@ -35,7 +35,7 @@ function Header() {
           </li>
           <li className="py-2">
             {" "}
-            <Link to={PRODUCT_PATH}>Sản phẩm</Link>
+            <Link to={STORE_PATH}>Cửa Hàng</Link>
           </li>
           <li className="py-2">
             {" "}

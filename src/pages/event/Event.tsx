@@ -5,7 +5,7 @@ import React from 'react'
 const Event = () => {
   return (
     <div className='bg-secondary-200 w-full'>
-      <Banner name = "Sự kiện"/>
+      <Banner name = "Sự kiện" imgUrl='./images/events/event.png'/>
       <ListEvent />
     </div>
   )

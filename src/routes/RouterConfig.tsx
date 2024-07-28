@@ -8,6 +8,10 @@ import GuestRoute from "./GuestRoute";
 import Login from "@/pages/auth/Login";
 import Signup from "@/pages/auth/Signup";
 import Event from "@/pages/event/Event";
+import Blog from "@/pages/blog/Blog";
+import Stores from "@/pages/stores/Stores";
+import Shop from "@/pages/shop/Shop";
+import ProductDetail from "@/pages/shop/ProductDetail";
 
 
 type Props = {};
@@ -28,6 +32,10 @@ const RouterConfig = (props: Props) => {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="event" element={<Event />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="store" element={<Stores />} />
+        <Route path="/store/:id/detail" element={<Shop />} />
+        <Route path="/store/:id/detail/:product" element={<ProductDetail />} />
         {/* For user */}
         <Route element={<ProtectedRoute allowedRoles={[ROLES.USER]} />}>
           {/* <Route path="/profile/:id" element={<Profile />} /> */}

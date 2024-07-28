@@ -21,8 +21,8 @@ const Home = (props: Props) => {
     <div>
       <div>
         <div className="banner">
-          <div className=" flex flex-col justify-center items-center pt-20">
-            <div className="text-3xl font-bold ">
+          <div className="flex flex-col justify-center items-center pt-20">
+            <div className="text-3xl font-bold">
               Câu lạc bộ người khuyết tật
             </div>
             <div className="text-2xl py-2">

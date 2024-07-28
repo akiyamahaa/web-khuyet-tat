@@ -126,5 +126,5 @@ export const dataEvents:Event[] =
             title: 'Quảng Trị: Tư vấn sống độc lập cho người khuyết tật tại nhà',
             description: 'Vừa bước chân vào nhà ông N.D.T – người khuyết tật đang sống tại xã Quảng Trị...',
             dateTime: '8 phút trước',
-        }
+        },
     ];
