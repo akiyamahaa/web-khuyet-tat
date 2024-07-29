@@ -7,12 +7,13 @@ import NotFound from "@/pages/error/NotFound";
 import GuestRoute from "./GuestRoute";
 import Login from "@/pages/auth/Login";
 import Signup from "@/pages/auth/Signup";
+import { INTRODUCTION_PATH } from "./constant";
+import Introduction from "@/pages/Introduction";
 import Event from "@/pages/event/Event";
 import Blog from "@/pages/blog/Blog";
 import Stores from "@/pages/stores/Stores";
 import Shop from "@/pages/shop/Shop";
 import ProductDetail from "@/pages/shop/ProductDetail";
-
 
 type Props = {};
 
@@ -22,7 +23,6 @@ export const ROLES = {
 };
 
 const RouterConfig = (props: Props) => {
-
   return (
     <Routes>
       {/* Add error, loading */}
@@ -35,6 +35,7 @@ const RouterConfig = (props: Props) => {
         <Route path="blog" element={<Blog />} />
         <Route path="store" element={<Stores />} />
         <Route path="/store/:id/detail" element={<Shop />} />
+        <Route path={INTRODUCTION_PATH} element={<Introduction />} />
         <Route path="/store/:id/detail/:product" element={<ProductDetail />} />
         {/* For user */}
         <Route element={<ProtectedRoute allowedRoles={[ROLES.USER]} />}>

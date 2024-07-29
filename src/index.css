@@ -18,13 +18,9 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-.backdrop-filter {
-  backdrop-filter: blur(1px);
-  background-color: rgba(14, 14, 76, 0.738);
-}
+
 #slider-home-event,
 #slider-home-news {
 	.slick-next:before,
