@@ -6,7 +6,7 @@ function Footer() {
 			<div className=" flex justify-center ">
 				<div className="container flex justify-between md:items-center px-5 py-12 max-md:flex-col">
 					<div className="my-10 ">
-						<div className="text-3xl font-bold">LOGO</div>
+						<div className="text-3xl font-bold text-primary">LOGO</div>
 						<div className="font-bold">Câu lạc bộ người khuyết tật</div>
 					</div>
 					<div className="my-10">
