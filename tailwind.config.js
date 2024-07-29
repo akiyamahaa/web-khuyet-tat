@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#97A8FC',
+        primary: "#3758F9",
+				"primary-light-3": "#97A8FC",
+				"gray-gray-2": "#F3F4F6",
         tile: '#3758F9',
         link: '#2D68F8',
         secondary: {
@@ -19,6 +21,10 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
+      screens: {
+				mobile: "320px",
+				fs: "100px",
+			},
     },
     fontSize: {
       sm: '0.8rem',
