@@ -14,7 +14,10 @@ module.exports = {
           200: '#F3F4F6',
         },
         subtitle: '#6B7280',
-        normal: '#111928'
+        normal: '#111928',
+        // primary: "#3758F9",
+				"primary-light-3": "#97A8FC",
+				"gray-gray-2": "#F3F4F6",
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
@@ -25,8 +28,11 @@ module.exports = {
       base: '1rem',
       xl: '1.25rem',
       '2xl': '2.5rem',
-    }
+    },
+    			screens: {
+				mobile: "320px",
+				fs: "100px",
+			},
   },
   plugins: [],
 }
-

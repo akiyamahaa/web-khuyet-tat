@@ -13,16 +13,17 @@ import Stores from "@/pages/stores/Stores";
 import Shop from "@/pages/shop/Shop";
 import ProductDetail from "@/pages/shop/ProductDetail";
 
+import { INTRODUCTION_PATH } from "./constant";
+import Introduction from "@/pages/Introduction";
 
 type Props = {};
 
 export const ROLES = {
-  USER: "0",
-  ADMIN: "1",
+	USER: "0",
+	ADMIN: "1",
 };
 
 const RouterConfig = (props: Props) => {
-
   return (
     <Routes>
       {/* Add error, loading */}
@@ -31,6 +32,10 @@ const RouterConfig = (props: Props) => {
       <Route element={<LayoutRoute />}>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
+								<Route
+					path={INTRODUCTION_PATH}
+					element={<Introduction />}
+				/>
         <Route path="event" element={<Event />} />
         <Route path="blog" element={<Blog />} />
         <Route path="store" element={<Stores />} />
