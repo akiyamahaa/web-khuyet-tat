@@ -41,9 +41,9 @@ function Header() {
 							<li className={`py-2 px-5 font-bold ${isActive("/events") ? "text-blue-400" : ""}`}>
 								<NavLink to="/events">Sự kiện</NavLink>
 							</li>
-							<li className={`py-2 px-5 font-bold ${isActive("/products") ? "text-blue-400" : ""}`}>
+							{/* <li className={`py-2 px-5 font-bold ${isActive("/products") ? "text-blue-400" : ""}`}>
 								<NavLink to="/products">Sản phẩm</NavLink>
-							</li>
+							</li> */}
 							<li className={`py-2 px-5 font-bold ${isActive("/blog") ? "text-blue-400" : ""}`}>
 								<NavLink to="/blog">Bài viết</NavLink>
 							</li>
@@ -71,9 +71,9 @@ function Header() {
 						<li className={`py-2 ${isActive("/events") ? "text-blue-400" : ""}`}>
 							<NavLink to="/events">Sự kiện</NavLink>
 						</li>
-						<li className={`py-2 ${isActive("/products") ? "text-blue-400" : ""}`}>
+						{/* <li className={`py-2 ${isActive("/products") ? "text-blue-400" : ""}`}>
 							<NavLink to="/products">Sản phẩm</NavLink>
-						</li>
+						</li> */}
 						<li className={`py-2 ${isActive("/blog") ? "text-blue-400" : ""}`}>
 							<NavLink to="/blog">Bài viết</NavLink>
 						</li>
