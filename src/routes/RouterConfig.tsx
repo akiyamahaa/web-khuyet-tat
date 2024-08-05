@@ -31,7 +31,7 @@ const RouterConfig = (props: Props) => {
       <Route element={<LayoutRoute />}>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="event" element={<Event />} />
+        <Route path="events" element={<Event />} />
         <Route path="blog" element={<Blog />} />
         <Route path="store" element={<Stores />} />
         <Route path="/store/:id/detail" element={<Shop />} />
