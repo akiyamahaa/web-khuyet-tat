@@ -12,6 +12,7 @@ const NotFound = (props: Props) => {
         <h1>Home</h1>
       </Link>
       <p>404: page not found!</p>
+      <p>Page Lừa Đảo</p>
     </div>
   )
 }
