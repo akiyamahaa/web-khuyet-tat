@@ -14,6 +14,8 @@ import Blog from "@/pages/blog/Blog";
 import Stores from "@/pages/stores/Stores";
 import Shop from "@/pages/shop/Shop";
 import ProductDetail from "@/pages/shop/ProductDetail";
+import BlogDetail from "@/pages/blog/BlogDetail";
+import EventDetail from "@/pages/event/EventDetail";
 
 type Props = {};
 
@@ -21,7 +23,6 @@ export const ROLES = {
   USER: "0",
   ADMIN: "1",
 };
-
 const RouterConfig = (props: Props) => {
   return (
     <Routes>
@@ -35,6 +36,8 @@ const RouterConfig = (props: Props) => {
         <Route path="blog" element={<Blog />} />
         <Route path="store" element={<Stores />} />
         <Route path="/store/:id/detail" element={<Shop />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/events/:id" element={<EventDetail />} />
         <Route path={INTRODUCTION_PATH} element={<Introduction />} />
         <Route path="/store/:id/detail/:product" element={<ProductDetail />} />
         {/* For user */}

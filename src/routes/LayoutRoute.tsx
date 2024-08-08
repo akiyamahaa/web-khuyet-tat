@@ -4,9 +4,7 @@ import React from "react";
 
 import { Outlet } from "react-router-dom";
 
-type Props = {};
-
-const LayoutRoute = (props: Props) => {
+const LayoutRoute: React.FC = () => {
   return (
     <div>
       {/* Header */}

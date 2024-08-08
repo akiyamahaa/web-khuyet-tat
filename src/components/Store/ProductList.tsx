@@ -32,7 +32,7 @@ const ProductList = (
                     className="absolute w-full h-full object-cover left-0 top-0 transform transition-transform duration-1000 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-opacity-30 group-hover:bg-opacity-50 transition-opacity duration-1000"></div>
-                  <div className="absolute text-secondary-100 w-full h-0 group-hover:h-full group-hover:bottom-0 left-0 bottom-[-15%] transform transition-all duration-1000 p-4 backdrop-filter backdrop-blur-sm">
+                  <div className="absolute text-secondary-100 w-full h-0 group-hover:h-full group-hover:bg-opacity-50 group-hover:bottom-0 left-0 bottom-[-15%] transform transition-all duration-1000 p-4 backdrop-filter backdrop-blur-sm">
                     <div className="flex w-full justify-end mb-5">
                       {product.isFavorite ? (
                         <IoHeartOutline className="text-white hover:text-blue-200 text-[1.8rem]" />

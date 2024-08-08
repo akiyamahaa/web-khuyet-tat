@@ -44,3 +44,20 @@ code {
     margin-right: 0;
   }
 }
+.backdrop-filter {
+  backdrop-filter: blur(1px);
+  background-color: rgba(14, 14, 76, 0.738);
+}
+
+.dropdown-menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropdown-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
