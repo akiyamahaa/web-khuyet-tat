@@ -165,12 +165,12 @@ const Home = (props: Props) => {
                   return (
                     <div
                       key={index}
-                      className="relative p-2 bg-white rounded-2xl"
+                      className="relative p-2 md:w-[60%] bg-white rounded-2xl"
                     >
                       <img
                         src={newspaper.img}
                         alt=""
-                        className="w-full md:h-full object-cover rounded-xl mobile:h-[468px]"
+                        className="w-full md:h-auto object-cover rounded-xl mobile:h-[468px]"
                       />
                       <div className="absolute bottom-4 left-4 right-4  height-fit text-white uppercase bg-[rgba(0,0,0,0.65)] p-4 rounded-lg">
                         <div className="text-[14px] font-medium mb-2">

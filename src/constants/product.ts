@@ -1,107 +1,451 @@
 export interface Product {
-    id: number;
-    storeId: number;
-    title: string;
-    imgUrl?: string;
-    price?: number;
-    isFavorite?: boolean;
-    informations?: Informations
+  id: number;
+  storeId: number;
+  title: string;
+  imgUrl?: string;
+  price?: number;
+  isFavorite?: boolean;
+  informations?: Informations;
+  link?: string;
 }
 export interface Informations {
-    size: string;
-    author: string;
-    topic: string;
-    code: string;
-    desc: string;
-  }
-export const products:Product[] = [
-    {
-        id: 1,
-        storeId: 1,
-        title: "Tranh sơn dầu - Vào thu",
-        price: 100,
-        isFavorite: true,
-        imgUrl: "https://s3-alpha-sig.figma.com/img/321a/4df9/944ae13c55153572f28793affbb9ca03?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=o3jtCvTzWoyul2Kf-bsi34FTCzl2GQu7FF5HYEoj1SrS7uKHsIAs5XQZ9xlDYmO0H7xf0j9d-y83DQacCV6APWpPhIU5qJGHv37wj4mJQTR9Iy6CJtYvkrjp3pDPKj~nwe9iNL2PnH8m6bp5AAnHXSI5xSYGG38HoiOFWRrnqPRL45Ia27MXXEuYH1eeNHEqa9-1TcF0gJrhqk31x8DV5CzfQaHc6AWb44~Cot4QMmei74pfg07UzMX2AK-PznC630vZFBdC30LW1l74ukY1FgZq6JV44VmPKMLZo-b7fy20CX~4FCpzxD-KKxEO0DBf1YcFVjoDmvyPr-fOaijpcQ__",
-    },
-    {
-        id: 2,
-        storeId: 1,
-        price: 150,
-        title: "Tranh sơn dầu - Xuân",
-        imgUrl: "https://s3-alpha-sig.figma.com/img/1d80/8657/cf4eda8c0b6312e51a3100eef6339d25?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OoTMmxlhjatYxX10R5cnd2I9XgsA4ZB3sutQzPpDbctbxG5a~cGpoMYBbzXNASRupT8mAG9lPsDHQYe0xCgMcVlj6ty6KwhzSqPTRxgfhz2KxogzhN7AMpsh0ok4UhVViVLy340Vmd96N~m52AM6x1A8js9AUpLkMyhvGw6aLzRoY9c8cnqV8uUYUgdXwWlZC1F9tV25Ob4IqTP2UqXFi1VJBWTPr2hqoj8SdVeVlzVU9wmNEMp8kcqhYTAVNtWc~zFoJNBAKA7kdfshQENxYEFqNgmGDP~lvxPtnf5EUY1ThW~Gac7OQCbkiTqmi6mxKWsLZvjLdrqGQcAMbo-gIA__",
-    },
-    {
-        id: 3,
-        storeId: 1,
-        price: 120,
-        isFavorite: true,
-        title: "Tranh sơn dầu - Xóm nhỏ",
-        imgUrl: "https://s3-alpha-sig.figma.com/img/f440/9372/ff53510281eae4262158282c73ec3eaa?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G~JEmSK058cPLd1gY02-Z7wfF6jFIjnof5YXjvXo1xdP7X-POVzLCQfE23K3Tmb0N264LCPboqUELrTEyGSBAnGhBZV0JAOypjtEeYcxvNd7XBGhgx50JTSVyuz46WPDLzdJErEJRFOeGoHYuulkDUw~T1vw0zMC4rTNd62ZS9sCLYiU0VO44g2MQ3nxSTFcOgUQZ1F6B4OyofJfC6p8G-6y8pJK7NrLTN~0fu8s1VsdOvz3fIPA87FEXb93MJiXTNxf4vrnJHpIXbxDO3YTbhIfhJED9GiFmukPH2Hs7rGJWXDxJvGER5k0SqywNx174NU-fbnwDmw6p-nx8pH0Pg__",
-    },
-    {
-        id: 4,
-        storeId: 1,
-        price: 240,
-        title: "Tranh sơn dầu - Trưa hè",
-        imgUrl: "https://s3-alpha-sig.figma.com/img/b870/3bfa/cefad00817e188d1839b22488e660be9?Expires=1722211200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HliIKSdjq8UEPcO6945uhU2bE6KQX3LqarsTWzRuu31d6Y06ua7pUzlE6Hr1jUA7IPZwzhSJXHuynph-B8qabu125Sc2wUMIHV3KX9nAEf2F97slLDanrKKwa0rFIwDf-uY-ncoie905SaOSwFHQfkrcPBC0ptZ4jZkqPcA-0Zc5SL8bFTWi5tIKaRZnGDb0J0Hh--OTkGAXGK6sVhafZg1lmQpPquYWWG-fLocZgap-NrB1a~Qf7iIjf-QLp8HSNl8esHbvZuE2Zu~yOaKBYEyyp7yUhmC45uOqVVF4-2gelviCWg7UwgyqeiDIgl3ezgq-ZIWXNNjgIdvZ4Yvd9g__",
-    },
-    {
-        id: 5,
-        storeId: 1,
-        isFavorite: true,
-        price: 178,
-        title: "Túi Xách 4 Cạnh Vuông",
-        imgUrl: "/images/products/img_1.png",
-    },
-    {
-        id: 6,
-        storeId: 3,
-        title: "Túi Thời Trang",
-        imgUrl: "/images/products/img_3.png",
-        price: 143,
-        informations: {
-            size: "70x70 cm",
-            author: "NGUYỄN VĂN CHIẾN",
-            topic: "VÀO THU",
-            code: "CO-NVC34V",
-            desc: "Các sản phẩm tranh sơn dầu do chúng tôi cung cấp là những sản phẩm của các bạn khuyết tật kém may mắn vẽ, Kính mong được sự ủng hộ của Quý khách hàng\n\nTất cả những sản phẩm của chúng tôi đều được làm bởi các thành viên Nhà May Mắn. Đây là một tổ chức bảo trợ xã hội dành cho các trẻ em mồ côi, những người bất hạnh, khuyết tật tại Việt Nam. Chúng tôi đều đề cao chất lượng và giá trị sản phẩm. Chúng tôi luôn kiểm tra và đóng gói đơn hàng kỹ lưỡng trước khi gửi đến các bạn để sản phẩm khi đến tay các bạn luôn có chất lượng tốt nhất và đơn hàng được chuyển giao một cách nhanh nhất mỗi khi bạn đặt hàng…"
-        }
-    },
-    {
-        id: 7,
-        storeId: 1,
-        price: 503,
-        title: "Túi Thời Trang",
-        imgUrl: "/images/products/img_4.png",
-    },
-    {
-        id: 8,
-        storeId: 2,
-        price: 127,
-        title: "Tranh sơn dầu - Vào thu",
-        imgUrl: "/images/products/img_5.png",
-    },
-    {
-        id: 9,
-        storeId: 1,
-        price: 512,
-        title: "Tranh Sơn Dầu Để Bàn 19",
-        imgUrl: "/images/products/img_5.png",
-    },
-    {
-        id: 10,
-        storeId: 2,
-        price: 351,
-        isFavorite: true,
-        title: "Tranh sơn dầu để bàn 20",
-        imgUrl: "/images/products/img_4.png",
-    },
-    {
-        id: 11,
-        storeId: 3,
-        price: 247,
-        title: "Tranh sơn dầu để bàn 20",
-        imgUrl: "/images/products/img_2.png",
-    },
+  size: string;
+  author: string;
+  topic: string;
+  code: string;
+  desc: string;
+}
+export const products: Product[] = [
+  {
+    id: 1,
+    storeId: 1,
+    title:
+      "Tranh sơn dầu - Mùa xuân trên vùng cao - Sản phẩm của người khuyết tật",
+    price: 900000,
+    isFavorite: true,
+    imgUrl: "/images/tranh/mxtvc.png",
+    link: "https://viet54.vn/product/tranh-son-dau-mua-xuan-tren-vung-cao-san-pham-cua-nguoi-khuyet-tat-p1229681",
+  },
+  {
+    id: 2,
+    storeId: 1,
+    price: 1050000,
+    title: "Tranh sơn dầu - Thảo nguyên xanh - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/tnx.png",
+  },
+  {
+    id: 3,
+    storeId: 1,
+    price: 1600000,
+    isFavorite: true,
+    title: "Tranh sơn dầu - Ngôi nhà hạnh phúc - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/nnhp.png",
+  },
+  {
+    id: 4,
+    storeId: 1,
+    price: 1600000,
+    title:
+      "Tranh sơn dầu - Thuận buồm xuôi gió - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/tbxg.png",
+  },
+  {
+    id: 8,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 1 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/1.png",
+  },
+  {
+    id: 9,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 2 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/2.png",
+  },
+  {
+    id: 10,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 3 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/3.png",
+  },
+  {
+    id: 11,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 4 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/4.png",
+  },
+  {
+    id: 12,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 5 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/5.png",
+  },
+  {
+    id: 13,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 6 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/6.png",
+  },
+  {
+    id: 14,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 7 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/7.png",
+  },
+  {
+    id: 15,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 8 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/8.png",
+  },
+  {
+    id: 16,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 9 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/9.png",
+  },
+  {
+    id: 17,
+    storeId: 1,
+    price: 130000,
+    title: "Tranh sơn dầu để bàn 10 - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/10.png",
+  },
+  {
+    id: 18,
+    storeId: 1,
+    price: 40000,
+    title: "Thú Nhồi Bông Con Cá",
+    imgUrl: "/images/tranh/ca.png",
+  },
+  {
+    id: 19,
+    storeId: 1,
+    price: 60000,
+    title: "Thú Nhồi Bông Con Tế Giác",
+    imgUrl: "/images/tranh/tegiac.png",
+  },
 
-]
+  {
+    id: 20,
+    storeId: 1,
+    price: 40000,
+    title: "Thú Nhồi Bông Con Dê",
+    imgUrl: "/images/tranh/de.png",
+  },
+
+  {
+    id: 21,
+    storeId: 1,
+    price: 50000,
+    title: "Thú Nhồi Bông Con Ngựa",
+    imgUrl: "/images/tranh/ngua.png",
+  },
+  {
+    id: 22,
+    storeId: 1,
+    price: 25000,
+    title: "Móc Khoá Con Cá",
+    imgUrl: "/images/tranh/mkconca.png",
+  },
+  {
+    id: 23,
+    storeId: 1,
+    price: 25000,
+    title: "Móc Khoá Con Heo",
+    imgUrl: "/images/tranh/heo.png",
+  },
+  {
+    id: 24,
+    storeId: 1,
+    price: 25000,
+    title: "Móc Khoá Con Gà",
+    imgUrl: "/images/tranh/mkconga.png",
+  },
+  {
+    id: 25,
+    storeId: 1,
+    price: 25000,
+    title: "Móc Khoá Con Voi",
+    imgUrl: "/images/tranh/voi.png",
+  },
+  {
+    id: 26,
+    storeId: 1,
+    price: 25000,
+    title: "Móc Khoá Con Cú Mèo",
+    imgUrl: "/images/tranh/mkcumeo.png",
+  },
+  {
+    id: 27,
+    storeId: 1,
+    price: 190000,
+    title: "Ba Lô Chim Cánh Cụt",
+    imgUrl: "/images/tranh/blcanhcut.png",
+  },
+  {
+    id: 28,
+    storeId: 1,
+    price: 600000,
+    title: "Tranh sơn dầu - Góc quê - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/gocque.png",
+  },
+  {
+    id: 29,
+    storeId: 1,
+    price: 700000,
+    title: "Tranh sơn dầu - Góc phố - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/gocpho.png",
+  },
+  {
+    id: 30,
+    storeId: 1,
+    price: 1400000,
+    title: "Tranh sơn dầu - Đường xưa - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/duongxua.png",
+  },
+  {
+    id: 31,
+    storeId: 1,
+    price: 1600000,
+    title: "Tranh sơn dầu - Đường hoa - Sản phẩm của người khuyết tật",
+    imgUrl: "/images/tranh/duonghoa.png",
+  },
+
+  {
+    id: 1,
+    storeId: 2,
+    price: 0,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/010.jpg",
+  },
+  {
+    id: 2,
+    storeId: 2,
+    price: 0,
+    isFavorite: true,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/018.jpg",
+  },
+  {
+    id: 3,
+    storeId: 2,
+    price: 0,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/025.jpg",
+  },
+  {
+    id: 4,
+    storeId: 2,
+    price: 0,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/038.jpg",
+  },
+  {
+    id: 5,
+    storeId: 2,
+    price: 0,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/015.jpg",
+  },
+  {
+    id: 6,
+    storeId: 2,
+    price: 0,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/037.jpg",
+  },
+  {
+    id: 7,
+    storeId: 2,
+    price: 0,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/039.jpg",
+  },
+  {
+    id: 8,
+    storeId: 2,
+    price: 0,
+    title: "Ví thêu tay handmade TXV010",
+    imgUrl: "/images/SGF/041.jpg",
+  },
+  {
+    id: 10,
+    storeId: 2,
+    price: 0,
+    title: "Hộp đựng giấy ăn hình chữ nhật SGF HDGL026",
+    imgUrl: "/images/SGF/giay1.jpg",
+  },
+  {
+    id: 11,
+    storeId: 2,
+    price: 0,
+    title: "Hộp đựng giấy ăn hình chữ nhật SGF HDGL021",
+    imgUrl: "/images/SGF/giay2.jpg",
+  },
+  {
+    id: 12,
+    storeId: 2,
+    price: 0,
+    title: "Hộp đựng giấy ăn hình chữ nhật SGF HDGL018",
+    imgUrl: "/images/SGF/giay3.jpg",
+  },
+  {
+    id: 13,
+    storeId: 2,
+    price: 0,
+    title: "Hộp đựng giấy ăn hình chữ nhật SGF HDGL019",
+    imgUrl: "/images/SGF/giay4.jpg",
+  },
+  {
+    id: 14,
+    storeId: 2,
+    price: 0,
+    title: "Set lót ly handmade SGF MLL 006",
+    imgUrl: "/images/SGF/ly1.jpg",
+  },
+  {
+    id: 15,
+    storeId: 2,
+    price: 0,
+    title: "Set lót ly handmade SGF MLL 005",
+    imgUrl: "/images/SGF/ly2.jpg",
+  },
+  {
+    id: 16,
+    storeId: 2,
+    price: 0,
+    title: "Set lót ly handmade chủ đề cafe",
+    imgUrl: "/images/SGF/ly3.jpg",
+  },
+  {
+    id: 17,
+    storeId: 2,
+    price: 0,
+    title: "Set lót ly handmade chủ đề hoa quả",
+    imgUrl: "/images/SGF/ly4.jpg",
+  },
+
+  {
+    id: 1,
+    storeId: 3,
+    price: 415000,
+    title: "Túi Vải & Ví Họa Tiết Truyền Thống, Đi Làm, Đi Chơi, Làm Quà Tặng",
+    imgUrl: "/images/Kym/tui1.jfif",
+    link: "https://www.kymviet.com.vn/products/tui-vai-vi-hoa-tiet-truyen-thong-di-lam-di-choi-lam-qua-tang/2912213000010900005",
+  },
+
+  {
+    id: 2,
+    storeId: 3,
+    price: 415000,
+    title: "Túi Xách Hoạ Tiết Rằn Ri, Đựng Laptop, Đi Làm, Đi Chơi",
+    imgUrl: "/images/Kym/tui2.jfif",
+  },
+  {
+    id: 3,
+    storeId: 3,
+    price: 299000,
+    title: "Túi Đeo Vai Họa Tiết Truyền Thống - Thủ Công, Vải In Họa Tiết",
+    imgUrl: "/images/Kym/tui3.jfif",
+  },
+  {
+    id: 4,
+    storeId: 3,
+    price: 299000,
+    title: "Túi Đeo Vai Họa Tiết Đi Biển, Đi Chơi, Làm Quà Tặng",
+    imgUrl: "/images/Kym/yui4.jfif",
+  },
+  {
+    id: 5,
+    storeId: 3,
+    price: 900000,
+    title: "Trâu Mục Đồng - Thủ Công Nhồi Bông, Vải Thổ Cẩm Truyền Thống",
+    imgUrl: "/images/Kym/trau.jfif",
+  },
+  {
+    id: 6,
+    storeId: 3,
+    price: 900000,
+    title: "Voi Rừng Xanh - Thủ Công Nhồi Bông, Vải Thổ Cẩm Truyền Thống",
+    imgUrl: "/images/Kym/voi.jfif",
+  },
+  {
+    id: 7,
+    storeId: 3,
+    price: 750000,
+    title: "Chuột Trạng Nguyên - Thủ Công Nhồi Bông, Vải Gấm Dân Tộc",
+    imgUrl: "/images/Kym/chuot.jfif",
+  },
+  {
+    id: 8,
+    storeId: 3,
+    price: 750000,
+    title: "Lợn Đông Hồ - Thủ Công Nhồi Bông, Vải Thổ Cẩm Truyền Thống",
+    imgUrl: "/images/Kym/lon.jfif",
+  },
+  {
+    id: 9,
+    storeId: 3,
+    price: 100000,
+    title: "Cá Voi, Size Nhỏ - Thủ Công Nhồi Bông, Vải Cotton",
+    imgUrl: "/images/Kym/cavoi.jfif",
+  },
+  {
+    id: 10,
+    storeId: 3,
+    price: 100000,
+    title: "Cá Heo - Thủ Công Nhồi Bông, Vải Cotton",
+    imgUrl: "/images/Kym/caheo.jfif",
+  },
+  {
+    id: 11,
+    storeId: 3,
+    price: 150000,
+    title: "Cá Mập - Thủ Công Nhồi Bông, Vải Cotton",
+    imgUrl: "/images/Kym/camap.jfif",
+  },
+  {
+    id: 12,
+    storeId: 3,
+    price: 90000,
+    title: "Cá Ngựa - Thủ Công Nhồi Bông, Vải Cotton",
+    imgUrl: "/images/Kym/cangua.png",
+  },
+  {
+    id: 13,
+    storeId: 3,
+    price: 399000,
+    title: "Đồng Hồ Gỗ Rồng Việt - 2024 Giáp Thìn (Để Bàn)",
+    imgUrl: "/images/Kym/deban.jfif",
+  },
+  {
+    id: 14,
+    storeId: 3,
+    price: 399000,
+    title: "Đồng Hồ Gỗ Rồng Việt - 2024 Giáp Thìn (Treo Tường)",
+    imgUrl: "/images/Kym/treo tuong.jfif",
+  },
+  {
+    id: 15,
+    storeId: 3,
+    price: 245000,
+    title: "Gối Trái Tim - Thủ Công Nhồi Bông, Vải Cotton",
+    imgUrl: "/images/Kym/goi.jfif",
+  },
+  {
+    id: 16,
+    storeId: 3,
+    price: 210000,
+    title: "Gối Cổ Mèo - Thủ Công Nhồi Bông, Vải Cotton",
+    imgUrl: "/images/Kym/goico.jfif",
+  },
+];

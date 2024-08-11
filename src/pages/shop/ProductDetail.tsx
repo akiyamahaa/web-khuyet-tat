@@ -1,5 +1,7 @@
 import { StyleDivider } from "@/common/StyleDivider";
 import { Product, products } from "@/constants/product";
+import { formatNumber } from "@/utils/convertPrice";
+import { CircularProgress } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -12,8 +14,7 @@ const ProductDetail = () => {
     );
     setProductDetail(productData);
   }, []);
-  console.log("productDetail", productDetail);
-  return (
+  return productDetail ? (
     <div className="bg-secondary-200 w-full m-auto">
       <div className="w-[75%] m-auto ">
         <div className="pt-[4rem] pb-[4rem] flex flex-col md:flex-row justify-center">
@@ -32,11 +33,12 @@ const ProductDetail = () => {
               <p className="text-[18px] text-subtitle font-normal">
                 Giá khoảng:{" "}
                 <b className="text-[#F23030] text-[24px] font-bold">
-                  {productDetail?.price}đ
+                  {formatNumber(productDetail?.price || 0)}đ
                 </b>
               </p>
               <Link
-                to={"https://www.facebook.com"}
+                to={productDetail?.link || "/"}
+                target="_blank"
                 className="px-[28px] py-[13px] hover:opacity-95 bg-primary rounded-xl w-fit text-white"
               >
                 Đến nơi bán
@@ -65,10 +67,20 @@ const ProductDetail = () => {
           </div>
         </div>
         <StyleDivider />
-        <div className="py-8 text-[32px] flex flex-col justify-center items-center">
+        {/* <div className="py-8 text-[32px] flex flex-col justify-center items-center">
           <div className="text-normal text-center uppercase">Mô tả</div>
           <div className="w-16 h-1 bg-primary mt-2 mb-8"></div>
-          {/* <ProductList products={productInStore} /> */}
+          <ProductList products={productInStore} /> 
+        </div> */}
+      </div>
+    </div>
+  ) : (
+    <div className="bg-secondary-200 w-full m-auto">
+      <div className="w-[75%] m-auto ">
+        <div className="pt-[4rem] pb-[4rem] flex flex-col md:flex-row justify-center">
+          <div className="flex flex-col items-center w-100% md:flex-row md:gap-x-8">
+            <CircularProgress />
+          </div>
         </div>
       </div>
     </div>
